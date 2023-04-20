@@ -1,0 +1,48 @@
+nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  li {
+    position: relative;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  
+  li:hover {
+    background-color: #555;
+  }
+  
+  ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #555;
+    display: none;
+  }
+  
+  li:hover > ul {
+    display: block;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+  }
+  
+  a:hover {
+    background-color: #777;
+  }  
