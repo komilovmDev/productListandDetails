@@ -1,0 +1,23 @@
+.products {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2rem 0;
+  }
+
+  .product img {    
+    width: 400px;
+  }
+  
+  .product .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem;
+  }
+  
+  .product .price {
+    font-size: 1.25rem;
+    margin: 1rem;
+  }
+  

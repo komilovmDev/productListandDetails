@@ -1,21 +1,21 @@
-import React from 'react';
+import React from "react";
+import Product from "./Product";
+import "./Product.css";
+import { Link } from "react-router-dom";
 
-const Productes = ({products}) => {
+const Products = ({ products }) => {
   return (
-    <div>
-      <h2>Products</h2>
-      <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            <img src={product.image} alt={product.name} />
-            <h3>{product.name}</h3>
-            <p>{product.description}</p>
-            <p>{product.price}</p>
-          </li>
+    <div className="products">
+      {products &&
+        products.map((product) => (
+          <Link to={`/product/${product.id}`}>
+            <Product key={product.id} product={product} />
+          </Link>
         ))}
-      </ul>
     </div>
   );
 };
 
-export default Productes;
+export default Products;
+
+

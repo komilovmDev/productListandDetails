@@ -3,35 +3,36 @@ import { Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
 import Productes from './Productes';
 import ProductDetail from './ProductDetail';
+import Product from './Product';
 
 
 const categories = [
-  { title: 'Category 1', subcategories: ['Subcategory 1.1', 'Subcategory 1.2', 'Subcategory 1.3'] },
-  { title: 'Category 2', subcategories: ['Subcategory 2.1', 'Subcategory 2.2'] },
-  { title: 'Category 3', subcategories: ['Subcategory 3.1', 'Subcategory 3.2', 'Subcategory 3.3', 'Subcategory 3.4'] }
+  { title: 'Telfonlar', subcategories: ['Iphone'] },
+  { title: 'Mashinalar', subcategories: ['Supra'] },
+  { title: 'Kampyuterlar', subcategories: ['Asus'] }
 ];
 
 const products = [
   {
     id: 1,
-    name: 'Product 1',
-    description: 'Description for product 1',
-    price: 10.99,
-    image: 'https://via.placeholder.com/150'
+    name: 'iphone 14 pro max',
+    description: '256/8Gb',
+    price: `1199$`,
+    image: 'https://assets.asaxiy.uz/product/items/desktop/44f683a84163b3523afe57c2e008bc8c2022092114241486833ApwaRWowaz.png.webp'
   },
   {
     id: 2,
-    name: 'Product 2',
-    description: 'Description for product 2',
-    price: 19.99,
-    image: 'https://via.placeholder.com/150'
+    name: 'Supra mk4',
+    description: 'supra mk4 1222#',
+    price: `667,788$`,
+    image: 'https://i.pinimg.com/originals/3f/c2/7f/3fc27f343904bc9e7a974444dc28fa1d.jpg'
   },
   {
     id: 3,
-    name: 'Product 3',
-    description: 'Description for product 3',
-    price: 29.99,
-    image: 'https://via.placeholder.com/150'
+    name: 'Pc asus',
+    description: '1tb/ssd 32gb/ram corei7/13th rtx3060ti',
+    price: `1222$`,
+    image: 'https://www.punchtechnology.co.uk/wp-content/uploads/2022/11/Be-Quiet-Pure-Base-500FX-Gaming-Chassis-Front-Angle-with-RGB-Lighting-Close-600x600.jpg'
   }
 ];
 
@@ -55,6 +56,7 @@ function App() {
           path="/product/:productId"
           element={<ProductDetail products={products} handleAddToCart={handleAddToCart} />}
         />
+        <Route path='products' element={<Productes/>}/>
       </Routes>
     </div>
   );

@@ -2,13 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './nav.css'
 
-const categories = [
-  { title: 'Category 1', subcategories: ['Subcategory 1.1', 'Subcategory 1.2', 'Subcategory 1.3'] },
-  { title: 'Category 2', subcategories: ['Subcategory 2.1', 'Subcategory 2.2'] },
-  { title: 'Category 3', subcategories: ['Subcategory 3.1', 'Subcategory 3.2', 'Subcategory 3.3', 'Subcategory 3.4'] }
-];
-
-const Navbar = () => {
+const Navbar = ({categories}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState(null);
 
