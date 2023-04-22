@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Productes from './Productes';
 import ProductDetail from './ProductDetail';
 import Product from './Product';
+import Card from './Card';
 
 
 const categories = [
@@ -41,7 +42,8 @@ function App() {
 
   const handleAddToCart = (product) => {
     setCart([...cart, product]);
-  };
+  }
+  console.log(cart);
 
   return (
     <div>
@@ -56,8 +58,13 @@ function App() {
           path="/product/:productId"
           element={<ProductDetail products={products} handleAddToCart={handleAddToCart} />}
         />
-        <Route path='products' element={<Productes/>}/>
+        <Route path="products" element={<Productes/>}/>
       </Routes>
+      {
+          cart.map(item => (
+            <Card item={item} />
+          ))
+        }
     </div>
   );
 }
